@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Blog</title>
-</head>
-<body>
-<a href="post-heading">Blog </a>
-<div class="post-title">
-    blog entry for multiple lines
-</div>
-<div class="post-date">
-    may 25, 2017
-</div>
-<div>
-    Hi,here. line-1 line-2
-</div>
+<div class="post">
+    <div class="post-heading">
+        <div class="post-title">
+            {{p.subject}}
+        </div>
+        <div class="post-date">
+            {{p.created.strftime("%b,%d,%y")}}
+        </div>
+        <div class="content">
+            {{p.render_text | safe}}
+        </div>
 
-</body>
-</html>
+    </div>
+</div>
